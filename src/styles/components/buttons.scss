@@ -1,0 +1,68 @@
+.button-list{
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+}
+
+.button{
+    height:50px;
+    width:200px;
+    border-radius:5px;
+    border:2px solid pink;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+    overflow:hidden;
+
+    span{
+        font-size:16px;
+        color:black;
+        position: relative;
+        z-index: 1;
+    }
+
+    &--bg-grow{
+        &:before{
+            content: '';
+            width:0px;
+            height:0px;
+            background:pink;
+            position: absolute;
+            z-index:0;
+            transition: all 0.5s ease-in-out;
+        }
+    
+        &:hover{
+            &:before{
+                width:200px;
+                height: 50px;
+                
+            }
+        }
+    }
+    &--bg-shrink{
+        background-color: blue;
+        &:before{
+            content: '';
+            width:200px;
+            height:50px;
+            background:pink;
+            position: absolute;
+            z-index:0;
+            transition: all 0.5s ease-in-out;
+        }
+    
+        &:hover{
+            &:before{
+                width:0px;
+                height: 0px;
+                
+            }
+        }
+    }
+
+
+}

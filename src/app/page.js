@@ -1,8 +1,16 @@
+'use client'
+
+import Buttons from "../components/buttons";
+
+
 const Home = () => {
+
   return ( 
-    <>
-    Initial Commit
-    </>
+    <div className="page">
+      <div className="container">
+        <Buttons/>
+      </div>
+    </div>
    );
 }
  
